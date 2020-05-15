@@ -5,41 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/estilo.css">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Asap&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/10b5abdd28.js" crossorigin="anonymous"></script>
 </head>
 <body>
+  
   <header>
     <nav class="menu">
       <ul>
-        <li><a href="#">Sobre</a></li>
-        <li><a href="#">Portfólio</a></li>
-        <li><a href="#">Contato</a></li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#portfolio">Cursos</a></li>
+        <li><a href="#contato">Contato</a></li>
       </ul>
     </nav>
-         <img class="img-perfil" src="./img/foto.jpg" width="480" height="720">
-    <div>
+    <div class="titulo"> 
       <h1 class="site-title">Jencley Borges</h1>
       <h2 class="site-subtitle">Professor de teclado</h2>
+      <h2 class="site-subtitle">Integrante da banda "Sua Casa"</h2>
     </div>
-    
+
+
+        <div class="perfil"id= "home">
+          <img class= "imgperfil"src="./img/foto.jpg" alt="Perfil" >
+        </div>
+             
   </header>
-  <section>
-    <h2>Portfólio</h2>
+  <section class="portfolio"id="portfolio"> 
+    <h2>Cursos</h2>
+    
+    <div class="grid">
     <figure>
-      <img class="img-portfolio" src="./img/ecommerce-creditos-s-o-c-i-a-l-c-u-t-unsplash.jpg" alt="eCommerce">
-      <figcaption>eCommerce</figcaption>
+      <img class="img-portfolio" src="./img/ecommerce-creditos-s-o-c-i-a-l-c-u-t-unsplash.jpg" alt="Teclado Iniciante">
+      <figcaption>Teclado Iniciante</figcaption>
     </figure>
     <figure>
-      <img class="img-portfolio" src="./img/mobile-creditos-nate-grant-unsplash.jpg" alt=">Mobile">
-      <figcaption>Mobile</figcaption>
+      <img class="img-portfolio" src="./img/mobile-creditos-nate-grant-unsplash.jpg" alt="Teclado Intermediário">
+      <figcaption>Teclado Intermediário</figcaption>
     </figure>
     <figure>
-      <img class="img-portfolio" src="./img/webdesign-creditos-domenico-loia-unsplash.jpg" alt="Web design">
-      <figcaption>Web design</figcaption>
+      <img class="img-portfolio" src="./img/webdesign-creditos-domenico-loia-unsplash.jpg" alt="Teclado Avançado">
+      <figcaption>Teclado Avançado</figcaption>
     </figure>
     <figure>
-      <img class="img-portfolio" src="./img/projpessoais-creditos-hal-gatewood-unsplash.jpg" alt="Projetos pessoais">
-      <figcaption>Projetos pessoais</figcaption>
+      <img class="img-portfolio" src="./img/projpessoais-creditos-hal-gatewood-unsplash.jpg" alt="Projetos da Banda">
+      <figcaption>Projetos da Banda</figcaption>
     </figure>
+    </div>
+
   </section>  
+  <section class="contato" id=contato>
+    <h2></h2>
+    <div class="grid icons">
+      <a target="_blank" href="https://github.com/jbley1">
+        <i class="fab fa-github"></i>
+      </a>
+      <a target="_blank" href="https://twitter.com/jencleyborge">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a target="_blank" href="https://linkedin.com/in/vanessametonini">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="mailto:jencleyborge@gmail.com">
+        <i class="fas fa-envelope"></i>
+      <a target="_blank" href="https://instagram.com/jencleyborges">
+        <i class="fab fa-instagram-square"></i>
+      </a>
+    </div>
+  </section>
 </body>
 </html>

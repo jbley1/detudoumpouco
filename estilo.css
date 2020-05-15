@@ -6,11 +6,12 @@
 }
 
 body {background-image:
-  url('https://img.freepik.com/fotos-gratis/teclado-de-piano-de-cauda-fundo-desfocado-suave-preto-e-branco_41691-533.jpg?size=626&ext=jpg');
-  background-size: auto 100vh;
-  font-family: Arial;
+  url('https://image.freepik.com/fotos-gratis/teclado-de-piano-de-cauda-fundo-desfocado-suave-preto-e-branco_41691-533.jpg');
+  background-size: 100% 100vh;
+  font-family: 'Source Code Pro', monospace;
   height: 100vh ;
   font-size: 10px;
+  
 }
 
 
@@ -22,10 +23,51 @@ body {background-image:
 }
 
 header{
-  height: 100vh;
+  height: 70vh;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.imgperfil{
+  border-radius: 100%;
+  object-fit: cover;
+  object-position: 0px -35px;
+  height: 300px;
+  width: 300px;
+  }
+
+ @media (min-width: 370px){
+   
+  .imgperfil{
+    border-radius: 100%;
+    object-fit: cover;
+    object-position: 0px -35px;
+    height: 250px;
+    width: 250px;
+  }
+ }
+
+
+@media (min-width: 560px){
+   
+  .imgperfil{
+    border-radius: 100%;
+    object-fit: cover;
+    object-position: 0px -35px;
+    height: 250px;
+    width: 250px;
+  }
+ }
+    
+
+    
+
+
+
+.perfil{
+  align-content: center;
+  padding: 3em;
 }
 
 .menu{
@@ -33,6 +75,7 @@ header{
       position: fixed;
       width: 100vw;
       top: 0px;
+      z-index: 1;
     }
 .menu ul{
     display: flex;
@@ -46,37 +89,138 @@ header{
 .menu a{
     display: block;
     padding:10px 20px ;
-
+    transition: background-color 2s, color 1s;
+    border-radius: 10%;
   }
-  
+
+.menu a:active,
+.menu a:hover{
+    background-color: rgb(0, 0, 0);
+    color: whitesmoke;
+  }
+
 a{
-    color: teal;
+    color: rgb(0, 0, 0);
     text-decoration: none;
   }
   
 a:hover{
-    text-decoration: underline;
+    text-decoration: none;
   }
-  
+
+.titulo{
+  transform: scale(0.2) translateY(20vh);
+  opacity: 0;
+
+  animation: linear 1.5s animacaoTitulo forwards;
+}
+
+@keyframes animacaoTitulo{
+
+  from {transform: scale(0.2) translateY(20vh);
+    opacity: 0;
+  }
+  to {transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
 .site-title,
 .site-subtitle{
-    color: rgb(0, 0, 0); 
+    color: rgb(255, 255, 255); 
     text-align: center;
   }
   
 .site-subtitle{
     font-style: italic;
+    font-family: 'Asap', sans-serif;
+    line-height: 1.8em;
   }
   
+.site-title{
+  font-family: 'Abril Fatface', cursive ;
+  font-size: 50px;
+  }
+
+
+.portfolio {
+  padding: 2em;
+  min-height: 95vh;
+  background-color: rgb(231, 224, 218);
+}
+
+.contato{
+  padding: 2em;
+  min-height: 30vh;
+}
+
+.contato h2,
+.portfolio h2 {
+    font-family: 'Press Start 2P', cursive;
+    color: rgb(0, 0, 0);  
+    margin-bottom: 1.5em;
+    font-size: 2em;
+}
+
+.portfolio .grid {
+  display: grid;
+  gap: 2em;
+  align-content: center;
+}
+
+@media (min-width: 560px) {
+  .portfolio .grid {
+    grid-template-columns: repeat(2, 240px);
+    align-content: center;
+    justify-content: center;
+    height: calc(95vh - 8em - 28px);
+  }
+}
+
+@media (min-width: 740px) {
+  .portfolio .grid {
+    grid-template-columns: repeat(2, 320px);
+    align-content: center;
+    justify-content: center;
+    height: calc(95vh - 8em - 28px);
+  }
+}
+
+.portfolio figure {
+  text-align: center;
+
+}
+
 .img-portfolio{
-  height: 180px;
-  width: 180px;
-}  
-.img-perfil{
-  background-color: #ddd;
-  height: 180px;
-  width: 180px;
-  border-radius: 100%;
-  position: absolute;
-  top: 1in;
+    height: 180px;
+    width: 240px;
+    transition: transform 500ms;
+    border-radius: 10%;
+  }
+
+.img-portfolio:hover{
+  transform: scale(1.1);
+}
+
+@media(min-width: 1220px) {  
+    .img-portfolio{
+      height: 240px;
+      width: 310px;
+    }
+}
+
+.contato .icons{
+  text-align: center;
+}
+
+.contato a{
+  color: black;
+  font-size: 4em;
+  transition: text-shadow 1s;
+}
+
+.contato a:active,
+.contato a:hover{
+  text-decoration: none;
+  text-shadow:0px 0px 30px rgb(0, 0, 0);
 }
